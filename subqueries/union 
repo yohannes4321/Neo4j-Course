@@ -1,4 +1,15 @@
  the same number of column and same name
 
+call{
+    match(m:Movie)-[:IN_GENRE]->(g:Genre)
+    with g.name as genre,Count(m) as cnt
+    return genre,cnt
+order by cnt asc limit 1
+union
+match(m:Movie)-[:IN_GENRE]->(g:Genre)
+with g.name as genre,count(m)as cnt
+return genre,cnt
+order by cnt  desc limit 1
 
- 
+}return genre,cnt
+ORDER BY genre

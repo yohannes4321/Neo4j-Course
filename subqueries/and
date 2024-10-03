@@ -1,0 +1,1 @@
+match (n:Actor & Director) RETURN n limit 100
