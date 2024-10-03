@@ -1,0 +1,17 @@
+WITH CALUSE
+ TO CHAIN TOGETHER .... ONLY THE VARIABLES THAT IS PASSED 
+ WITH clase is the one that is defined for the usage if not defind 
+ with cluase we cannot use it for futhure usage
+
+
+ MATCH (a:Actor{name:"Eric Campbell"})-[:ACTED_IN]->(m:Moive)
+ with m 
+ RETURN a.name ,m.name
+
+ only the m.name is defined not a.name
+
+
+MATCH (a:Actor{name:"Eric Campbell"}) -[:ACTED_IN]->(m:Movie)
+with m
+MATCH(m)<-[*]-(node2)
+return m,node2
