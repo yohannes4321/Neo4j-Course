@@ -1,0 +1,1 @@
+MATCH (a:Actor{name:"Eric Campbell"})-[:ACTED_IN]->(m:Movie) RETURN a.url ,m.languages
