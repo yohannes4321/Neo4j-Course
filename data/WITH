@@ -10,8 +10,7 @@ WITH CALUSE
 
  only the m.name is defined not a.name
 
-
-MATCH (a:Actor{name:"Eric Campbell"}) -[:ACTED_IN]->(m:Movie)
-with m
-MATCH(m)<-[*]-(node2)
-return m,node2
+Match (a:Actor{name:"Eric Campbell"}) -[:ACTED_IN]->(m:Movie)
+WITH m
+MATCH (m)<-[*]-(node1)
+return node1,m

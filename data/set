@@ -1,0 +1,9 @@
+set =update  and Add label ,relationship,node
+
+MATCH (a:Person{name:"Edna Purviance"})
+SET a:Director /// to set the label to Director
+Return a
+
+MATCH (a:Person{name:"Edna Purviance"})
+SET a.tmdbId=79879
+Return a

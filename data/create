@@ -1,0 +1,5 @@
+create node and realthionship 
+create (a:Person{name:"jhon alex",age:20})
+create (m:Movie{name:"Evangelsim"})
+create (a)-[:ACTED_IN]->(m)
+return a,m

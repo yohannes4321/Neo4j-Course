@@ -1,0 +1,6 @@
+Match (a:Actor {name:"Eric Campbell"})-[:ACTED_IN]->(m:Movie)
+with m
+match(m)<-[*]-(node2:User)
+with Collect (node2.name) as names  // change to list
+unwind names as rows  // change to names
+return rows

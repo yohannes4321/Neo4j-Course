@@ -1,0 +1,4 @@
+MATCH (a:Person{name:"Edna Purviance"})
+remove a.age
+remove a:Director
+Return a

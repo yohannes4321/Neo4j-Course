@@ -1,0 +1,7 @@
+change the list to objects
+unwind [10,20,30] as x
+call{
+    with x
+    Return x*10 as y
+}
+return x, y

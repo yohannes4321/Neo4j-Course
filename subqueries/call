@@ -1,0 +1,7 @@
+MATCH(n:Actor)
+with n limit 10
+
+call{with n
+return n.name as result 
+}
+return result

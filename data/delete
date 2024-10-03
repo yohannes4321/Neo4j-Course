@@ -1,0 +1,9 @@
+You must delete all relationship first in delete other wise it throws error 
+if you use detach delete it automatically delete the node with relationship
+
+create (a:Person{name:"jhon alex",age:20})
+create (m:Movie{name:"Jesus Movie"})
+create (a)-[:ACTED_IN]->(m)
+WITH a ,m
+match (a:Person{name:"jhon alex",age:20})
+detach delete a
