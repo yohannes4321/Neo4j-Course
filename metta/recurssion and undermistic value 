@@ -1,0 +1,13 @@
+; Define the binary value generator (random bit)
+(= (bin) 0)
+(= (bin) 1)
+
+; Base case: if the input list is empty, return an empty list
+(= (gen_bin ()) ())
+
+; Recursive case: generate a binary list of the same structure
+(= (gen_bin (:: $x $xs))
+   (:: (bin) (gen_bin $xs)))
+
+; Testing with a non-empty list
+! (gen_bin (:: 1 (:: 2 (:: 3 (:: 4 ())))))

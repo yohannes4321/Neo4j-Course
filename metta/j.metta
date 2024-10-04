@@ -43,3 +43,5 @@ then the Car (select the first one from the list so there is only one element in
 (:: ($f $x) (map $f $xs) ))
 (=(square $x)(* $x $x))
 !(map square (:: 1 (:: 2 ( :: 3()))))
+
+

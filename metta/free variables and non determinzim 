@@ -1,0 +1,8 @@
+(=(croaks Fritz ) True)
+(=(eats_files Fritz) True)
+(=(croaks sam) True)
+(=(eats_files sam) False)
+(=(frog $x) (and (croaks $x)(eats_files $x )))
+!(if(frog $x)( $x is frog )($x is not frog))
+(=(green $x) (if (frog $x )($x is Green) ($x is not green )))
+!(green $x )

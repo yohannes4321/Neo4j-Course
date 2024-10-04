@@ -1,0 +1,11 @@
+(= (bin) 0)
+(= (bin) 1)
+(=(gen_bin $n )
+(if(> $n 0)
+(:: (bin)(gen_bin(- $n 1)))
+()
+
+))
+!(gen_bin 3)
+
+metta give both 0 or 1 so if the recursion stops which n=0 just ()

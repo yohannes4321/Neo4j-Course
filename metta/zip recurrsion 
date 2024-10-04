@@ -1,0 +1,6 @@
+(= (zip () ()) ())  ; Zipping two empty lists returns an empty list.
+
+(= (zip (:: $x $xs) (:: $y $ys))  ; Zipping two non-empty lists
+   (:: ($x $y) (zip $xs $ys)))     ; Pair the heads and recursively zip the tails.
+
+! (zip (:: A (:: B ())) (:: 1 (:: 2 ())))  ; Test case: Zipping the two lists.
