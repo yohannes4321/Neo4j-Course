@@ -34,3 +34,12 @@ then the Car (select the first one from the list so there is only one element in
 (=(length(:: $x $xs))
 (+ 1 (length $xs)))
 !(length (:: A(:: b(:: c()))))
+
+
+::functuon and virable
+
+(=(map $f())())
+(=(map $f (:: $x $xs))
+(:: ($f $x) (map $f $xs) ))
+(=(square $x)(* $x $x))
+!(map square (:: 1 (:: 2 ( :: 3()))))

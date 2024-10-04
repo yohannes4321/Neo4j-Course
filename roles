@@ -1,0 +1,3 @@
+match(p:Person)-[r:ACTED_IN]->(m:Movie)
+where  'Neo' in r.roles and m.title="The Matrix"
+    return p.name,r.roles
