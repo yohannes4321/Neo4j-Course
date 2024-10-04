@@ -1,0 +1,3 @@
+match (p:people)-[:Acted_in]->(m:Movie)
+where toLower(p.name) starts with "michael"
+return p.name
